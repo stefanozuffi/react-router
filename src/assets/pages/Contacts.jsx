@@ -1,12 +1,30 @@
-import FixedHeader from "../components/FixedHeader";
+import contactsData from '../../data/contactsData'
+import TeamCard from '../components/cards/TeamCard'
+import DepartCard from '../components/cards/DepartCard'
 
 export default function Contacts() {
     return(
-        
-            <main className="container">
-                <p>NOBODY KNOWS....</p>
-            </main>
+        <main className="container">
+
+            <h3>Departments</h3>
+            <div className="container card-container">
+                <div className="row">
+                    {contactsData.departments.map(item => 
+                        <DepartCard name={item.name} phone={item.phone} email={item.email} key={item.id}/>
+                    )}
+                </div>
+            </div>
+
+            <h3>Our Team</h3>
+            <div className="container card-container">
+                <div className="row">
+                    {contactsData.team.map(item => 
+                        <TeamCard name={item.name} image={item.image} role={item.role} email={item.email} key={item.id}/>
+                    )}
+                </div>
+            </div>
+        </main>
+
     
-        
-    )
+)
 }
