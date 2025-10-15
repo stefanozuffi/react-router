@@ -9,6 +9,7 @@
 
 body {
   font-family: 'Mulish Variable', sans-serif;
+  background: linear-gradient(145deg, black 0%, rgb(58, 58, 58) 100%);
 }
 
 .header {
@@ -47,9 +48,42 @@ body {
   }
 }
 
+.jumbo {
+  background: linear-gradient(135deg, rgb(139, 225, 139) 0%,rgb(216, 248, 216) 100%);
+  text-align: center;
+
+  p {
+     margin: 5rem auto;
+  }
+}
+
 .card {
+  background: linear-gradient(135deg, rgb(139, 225, 139) 0%,rgb(216, 248, 216) 100%);
+
   img {
     height: 20rem;
     width: 20rem;
+  }
+}
+
+
+.companyCard {
+  padding: 3rem 0;
+  align-items: center;
+}
+
+
+
+.footer {
+  color: white;
+  background: linear-gradient(145deg, black 0%, rgb(58, 58, 58) 100%);
+
+  ul {
+    list-style-type: none;
+    font-size: 12px;
+  }
+
+  .address {
+    text-align: center;
   }
 }

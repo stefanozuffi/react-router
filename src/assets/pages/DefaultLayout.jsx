@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import FixedHeader from "../components/FixedHeader";
+import FixedFooter from "../components/FixedFooter";
 
 export default function DefaultLayout() {
     
@@ -13,7 +14,7 @@ export default function DefaultLayout() {
             <Outlet/>
             
             <footer>
-                {/* fixed footer to do */}
+                <FixedFooter/>
             </footer>
         </>
         

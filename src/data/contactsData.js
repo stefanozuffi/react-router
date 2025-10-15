@@ -2,7 +2,8 @@ const contactsData = {
     company: {
       name: "The Fake E-Commerce Ltd.",
       tagline: "Your trusted partner for inexistent products",
-      founded: "2024"
+      founded: "2024",
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800'
     },
     
     headquarters: {
