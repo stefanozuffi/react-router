@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import ProductCard from "../components/cards/ProductCard"
+import ProductCard from "../components/cardss/ProductCard"
 
 
 export default function ProductsList() {

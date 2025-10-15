@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import FixedHeader from "../components/FixedHeader";
+import { NavLink } from "react-router-dom";
 
-export default function HomePage() {
+
+export default function HomePage({onClick}) {
     return(
     
         <main>        
@@ -13,9 +13,9 @@ export default function HomePage() {
                         like the one in previous versions of Bootstrap. Check out the
                         examples below for how you can remix and restyle it to your liking.
                     </p>
-                    <button className="btn btn-primary btn-lg" type="button">
+                    <NavLink className="btn btn-primary btn-lg" type="button">
                         Start Shopping
-                    </button>
+                    </NavLink>
                 </div>
             </div>
             

@@ -1,7 +1,8 @@
 import contactsData from '../../data/contactsData'
-import TeamCard from '../components/Cards/TeamCard'
-import DepartCard from '../components/Cards/DepartCard'
-import CardLayout from '../components/../components/cards/CardLayout'
+import TeamCard from '../components/cardss/TeamCard'
+import DepartCard from '../components/cardss/DepartCard'
+import CardLayout from '../components/cardss/CardLayout'
+
 
 export default function Contacts() {
     return(
