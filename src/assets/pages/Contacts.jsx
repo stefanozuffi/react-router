@@ -1,10 +1,18 @@
 import contactsData from '../../data/contactsData'
 import TeamCard from '../components/cards/TeamCard'
 import DepartCard from '../components/cards/DepartCard'
+import CardLayout from '../components/cards/DepartCard'
 
 export default function Contacts() {
     return(
         <main className="container">
+            <h3>The Fake E-Commerce Ltd.</h3>
+            <CardLayout
+            titleName={contactsData.company.name}
+            phone={contactsData.contactInfo.phone}
+            email={contactsData.contactInfo.email}
+            support={contactsData.contactInfo.support}
+            />
 
             <h3>Departments</h3>
             <div className="container card-container">
