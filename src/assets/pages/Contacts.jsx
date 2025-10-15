@@ -1,8 +1,10 @@
-export default function WhoAreWe() {
+import FixedHeader from "../components/FixedHeader";
+
+export default function Contacts() {
     return(
         <>
             <header className="container">
-                <h1>WHO ARE WE???</h1>
+                <FixedHeader/>
             </header>
             <main className="container">
                 <p>NOBODY KNOWS....</p>

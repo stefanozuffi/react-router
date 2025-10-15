@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
+import FixedHeader from "../components/FixedHeader";
 
 export default function HomePage() {
     return(
         <>
-        <header className="d-flex justify-content-around align-items-center">
-            <h1>The Fake E-Commerce</h1>
-            <nav className="d-flex gap-4">
-                <Link to='/us'> Who are we?</Link>
-                <Link to='/products'>Products</Link>
-            </nav>
+        <header>
+            <FixedHeader/>
         </header>
         <main>        
             <div className="p-5 mb-4 bg-light rounded-3">

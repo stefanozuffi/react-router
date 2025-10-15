@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import ProductCard from "../components/ProductCard"
+import FixedHeader from "../components/FixedHeader"
 
 export default function ProductsList() {
     const [products, setProducts] = useState([])
@@ -17,7 +18,7 @@ export default function ProductsList() {
     return(
         <>
             <header className="container">
-                <h1>Our Products</h1>
+                <FixedHeader/>
             </header>
             <main className="container">
                 <div className="container">
