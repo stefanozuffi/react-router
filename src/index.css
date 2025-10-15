@@ -31,6 +31,19 @@ body {
       color: rgb(150, 150, 83);
       font-weight: bold;
     }
+
+    .active {
+      color: rgb(8, 76, 8);
+      text-shadow: 
+        0 0 5px rgba(50, 200, 50, 0.8),
+        0 0 10px rgba(50, 200, 50, 0.6),
+        0 0 20px rgba(50, 200, 50, 0.4),
+        0 0 40px rgba(50, 200, 50, 0.2);
+      background: rgba(50, 200, 50, 0.1);
+      border: 2px solid rgba(8, 76, 8, 0.5);
+      padding: 0.3rem 0.7rem;
+      border-radius: 20px;
+    }
   }
 }
 

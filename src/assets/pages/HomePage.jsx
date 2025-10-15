@@ -3,10 +3,7 @@ import FixedHeader from "../components/FixedHeader";
 
 export default function HomePage() {
     return(
-        <>
-        <header>
-            <FixedHeader/>
-        </header>
+    
         <main>        
             <div className="p-5 mb-4 bg-light rounded-3">
                 <div className="container-fluid py-5">
@@ -23,6 +20,6 @@ export default function HomePage() {
             </div>
             
         </main>
-        </>
+    
     )
 }

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import ProductCard from "../components/ProductCard"
+import ProductCard from "../components/cards/ProductCard"
 import FixedHeader from "../components/FixedHeader"
+import CardCtn from "../components/CardCtn"
 
 export default function ProductsList() {
     const [products, setProducts] = useState([])
@@ -15,22 +16,18 @@ export default function ProductsList() {
         fetchData('https://fakestoreapi.com/products')
     }, [])
 
+    const productsProps = {
+        id: 'id', 
+        title: 'title',
+        price: 'price',
+        image: 'image'
+    }
+
     return(
-        <>
-            <header className="container">
-                <FixedHeader/>
-            </header>
             <main className="container">
-                <div className="container">
-                    <div className="row">
-                        {products.map(product => 
-                            <ProductCard title={product.title} image={product.image} price={product.price} key={product.id}/>
-                        )}
-                    </div>
-                </div>
-                
+                <CardCtn Card={ProductCard} card_props={productsProps} list={products}/>
             </main>
-        </>
+
         
     )
 }
