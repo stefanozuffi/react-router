@@ -7,8 +7,8 @@ export default function ProductCard({title, price, image}) {
             practicalInfo={`$${price}`} 
             image={image}
             bs_sm={12}
-            bs_md={12}
-            bs_lg={6}
+            bs_md={6}
+            bs_lg={4}
         />
     )
 }

@@ -59,17 +59,23 @@ body {
 
 .card {
   background: linear-gradient(135deg, rgb(139, 225, 139) 0%,rgb(216, 248, 216) 100%);
-
-  img {
-    height: 20rem;
-    width: 20rem;
-  }
 }
 
 
-.companyCard {
-  padding: 3rem 0;
-  align-items: center;
+.jumbo-card {
+  background: linear-gradient(135deg, rgb(139, 225, 139) 0%,rgb(216, 248, 216) 100%);
+  text-align: center;
+
+  p {
+    margin: 1rem auto;
+  }
+
+  img {
+    width: 90%;
+  }
+
+  
+  
 }
 
 
@@ -85,5 +91,7 @@ body {
 
   .address {
     text-align: center;
+    font-size: 14px;
+    font-style: italic;
   }
 }

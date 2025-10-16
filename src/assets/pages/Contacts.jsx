@@ -1,13 +1,45 @@
 import contactsData from '../../data/contactsData'
 import TeamCard from '../components/cardss/TeamCard'
 import DepartCard from '../components/cardss/DepartCard'
-import CardLayout from '../components/cardss/CardLayout'
+import { NavLink } from 'react-router-dom'
 
 
 export default function Contacts() {
     return(
         <main className="container">
-            <div className="container card-container">
+
+
+            <div className="jumbo-card container p-2 pt-4 mb-1 bg-light rounded-1">
+                <div className="container-fluid">
+                    <h5 className="display-5 fw-bold mb-2"> Our fake contacts  </h5>
+                    <p className='fst-italic'> P.S: you don't need to actually contact us</p>
+                    <div className="image-container d-flex flex-column align-items-center">
+                        <img src={contactsData.company.image} alt="company-picture"/>
+                        <span className='fst-italic ms-5 align-self-start'>{contactsData.company.tagline}</span>
+                    </div>
+                    
+                    <div className="contacts d-flex justify-content-between">
+                        <div className="contactsInfo">
+                        
+                                <ul className='list-unstyled'>
+                                    <li>{contactsData.contactInfo.phone}</li>
+                                    <li>{contactsData.contactInfo.email}</li>
+                                    <li>{contactsData.contactInfo.support}</li>
+                                    <li>{contactsData.contactInfo.fax}</li>
+                                </ul>
+                
+                        </div>
+                        <div className="address">
+                            <span className="d-block">{contactsData.headquarters.address}, {contactsData.headquarters.city} </span>
+                            <span className='d-block'>{contactsData.headquarters.address.state}, {contactsData.headquarters.zipCode}</span> 
+                            <span className='d-block'>{contactsData.headquarters.country}</span>
+                            <span className='d-block'>Monday to Saturday: {contactsData.businessHours.weekdays}</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            {/* <div className="container card-container">
                 <div className="row">
                     <CardLayout
                     titleName={contactsData.company.name}
@@ -18,7 +50,7 @@ export default function Contacts() {
                     support={contactsData.contactInfo.support}
                     />
                 </div>
-            </div>
+            </div> */}
             
 
             <h3>Departments</h3>
