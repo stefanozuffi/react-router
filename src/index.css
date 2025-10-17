@@ -8,8 +8,9 @@
 }
 
 body {
-  font-family: 'Mulish Variable', sans-serif;
-  background: linear-gradient(145deg, black 0%, rgb(58, 58, 58) 100%);
+  font-family: 'Public Sans Variable', sans-serif;
+  /* background: linear-gradient(145deg, black 0%, rgb(58, 58, 58) 100%); */
+  background-color: rgb(58, 58, 58);
 }
 
 a {
@@ -62,12 +63,13 @@ a {
 }
 
 .card {
-  background: linear-gradient(135deg, rgb(139, 225, 139) 0%,rgb(216, 248, 216) 100%);
   border: none;
+  color: white;
   
   .card-header {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    
 
     span {
       padding: 0.2rem 0.6rem;
@@ -75,22 +77,25 @@ a {
     }
   }
 
-  .card-body {
+  /* .card-body {
     height: 10%;
+  } */
+  .card-body {
+    flex-grow: 0;
+    padding: 1rem;
   }
 
   img {
     height: 50%;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    
   }
 }
 
 /* #region Category */
 .man {
-  background: linear-gradient(135deg, lightblue 0%,rgb(216, 248, 216) 100%);
+  background: linear-gradient(180deg, rgba(135, 172, 228, 0.543) -50%, transparent 100%);
   .card-header {
-    background: linear-gradient(180deg, blue 0%,rgb(135, 172, 228) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 255, 0.634) 0%,rgba(135, 172, 228, 0.637) 100%);
     color: white;
 
     span {
@@ -100,15 +105,34 @@ a {
 }
 
 .woman {
-   background: linear-gradient(135deg, rgb(252, 211, 218) 0%,rgb(216, 248, 216) 100%);
+  background: linear-gradient(180deg, rgba(252, 211, 218, 0.654) -50%, transparent 100%);
+
+  .card-header {
+    background: linear-gradient(180deg, rgba(228, 212, 39, 0.634) 0%,rgba(213, 203, 87, 0.637) 100%);
+    color: white;
+
+    span {
+      background-color: blue;
+    }
+  }
+
+  .woman .card-header {
+    background: linear-gradient(180deg, rgba(228, 212, 39, 0.634) 0%,rgba(213, 203, 87, 0.637) 100%);
+    color: white;
+
+    span {
+      background-color: blue;
+    }
+  }
+   
 }
 
 .jewl {
-  background: linear-gradient(135deg, rgb(255, 251, 137) 0%,rgb(216, 248, 216) 100%);
+  background: linear-gradient(180deg, rgba(255, 251, 137, 0.561) -20%, transparent 100%);
 }
 
 .elec {
-  background: linear-gradient(135deg, silver 0%,rgb(216, 248, 216) 100%);
+  background: linear-gradient(180deg, rgba(192, 192, 192, 0.592) -20%, transparent 100%);
 }
 
 /* #endregion Category */
