@@ -21,7 +21,7 @@ export default function ProductsList() {
                 <div className="container">
                 <div className="row g-5">
                     {products.map(item => 
-                        <ProductCard title={item.title} image={item.image} price={item.price} key={item.id}/>
+                        <ProductCard title={item.title} image={item.image} price={item.price} description={item.description} key={item.id} rating={item.rating.rate} category={item.category}/>
                     )}
                 </div>
             </div>
