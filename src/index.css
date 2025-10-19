@@ -1,6 +1,7 @@
 @import url('bootstrap');
 @import url('bootstrap-icons');
 
+
 * {
   margin: 0;
   padding: 0;
@@ -17,34 +18,44 @@ a {
   text-decoration: none;
 }
 
+header {
+  margin-bottom: 10rem;
+}
+
+
 .header {
-  background: linear-gradient(135deg, rgb(139, 225, 139) 0%,rgb(216, 248, 216) 100%);
-  margin: 2rem auto;
+  background: linear-gradient(135deg, rgb(28, 125, 28) 0%,rgb(139, 225, 139) 100%);
+  margin: 2rem auto 5rem auto;
   width: 70%;
   border-radius: 50px 50px 50px 50px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); 
+  z-index: 1000;
   
 
   h4 {
     font-size: 16px;
     margin-bottom: -3px;
     font-weight: bold;
-    color: rgb(131, 131, 131);
+    color: rgb(202, 202, 202);
   }
 
   nav {
     a {
       text-decoration: none;
-      color: rgb(150, 150, 83);
+      color: rgb(95, 76, 79);
       font-weight: bold;
     }
 
     .active {
       color: rgb(8, 76, 8);
-      text-shadow: 
+      /* text-shadow: 
         0 0 5px rgba(50, 200, 50, 0.8),
         0 0 10px rgba(50, 200, 50, 0.6),
         0 0 20px rgba(50, 200, 50, 0.4),
-        0 0 40px rgba(50, 200, 50, 0.2);
+        0 0 40px rgba(50, 200, 50, 0.2); */
       background: rgba(50, 200, 50, 0.1);
       border: 2px solid rgba(8, 76, 8, 0.5);
       padding: 0.3rem 0.7rem;
@@ -65,10 +76,21 @@ a {
 .card {
   border: none;
   color: white;
+
+  span {
+    border-radius: 10px 10px 10px 10px;
+    padding-left: 10px;
+  }
   
   .card-header {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+
+    h5 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
     
 
     span {
@@ -94,45 +116,64 @@ a {
 /* #region Category */
 .man {
   background: linear-gradient(180deg, rgba(135, 172, 228, 0.543) -50%, transparent 100%);
-  .card-header {
-    background: linear-gradient(180deg, rgba(0, 0, 255, 0.634) 0%,rgba(135, 172, 228, 0.637) 100%);
-    color: white;
 
-    span {
-      background-color: blue;
-    }
+  span {
+    background-color: blue;
+  }
+
+  .card-header {
+    background: linear-gradient(180deg,rgba(135, 172, 228, 0.637)  0%,rgba(0, 0, 255, 0.634) 100%);
+    color: white;
   }
 }
 
 .woman {
   background: linear-gradient(180deg, rgba(252, 211, 218, 0.654) -50%, transparent 100%);
+  span {
+    background-color: rgb(245, 92, 117);
+  }
 
   .card-header {
-    background: linear-gradient(180deg, rgba(228, 212, 39, 0.634) 0%,rgba(213, 203, 87, 0.637) 100%);
+    background: linear-gradient(180deg, rgba(252, 211, 218, 0.654) -50%, rgba(251, 116, 139, 0.743)  100%);
     color: white;
 
-    span {
-      background-color: blue;
-    }
+    
   }
 
   .woman .card-header {
     background: linear-gradient(180deg, rgba(228, 212, 39, 0.634) 0%,rgba(213, 203, 87, 0.637) 100%);
     color: white;
-
-    span {
-      background-color: blue;
-    }
   }
    
 }
 
 .jewl {
   background: linear-gradient(180deg, rgba(255, 251, 137, 0.561) -20%, transparent 100%);
+  
+  color: white;
+
+  span {
+    background-color: darkgoldenrod;
+  }
+
+  
+}
+
+.jewl .card-header {
+  background: linear-gradient(180deg, rgb(242, 237, 180) -50%,rgb(163, 150, 0) 100%);
+  color: white;
 }
 
 .elec {
-  background: linear-gradient(180deg, rgba(192, 192, 192, 0.592) -20%, transparent 100%);
+  background: linear-gradient(180deg, rgba(192, 192, 192, 0.259) -20%, transparent 100%);
+
+  span {
+    background-color: rgb(128, 128, 128);
+  }
+
+  .card-header {
+    background: linear-gradient(180deg, rgba(219, 219, 219, 0.592) -50%, rgba(101, 101, 101, 0.592) 100%);
+  }
 }
 
 /* #endregion Category */
@@ -175,3 +216,10 @@ a {
     font-style: italic;
   }
 }
+
+/* Next Features: 
+
+1) lista prodotti con filter form
+2) pagina singola product card
+
+*/
