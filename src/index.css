@@ -269,6 +269,13 @@ header {
   }
 }
 
+
+.err-ctn {
+  p {
+    text-align: center;
+  }
+}
+
 /* Media Query */
 @media (max-width: 576px) {
   .card {

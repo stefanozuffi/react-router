@@ -16,6 +16,7 @@ export default function ProductPage() {
     const endpoint = `https://fakestoreapi.com/products/${id}` 
 
     function fetchData(endpoint) {
+        setProd(null)
         setLoading(true)
         setErr(false)
         
@@ -23,11 +24,13 @@ export default function ProductPage() {
         axios.get(endpoint)
         .then(res => {
             if (!res.data || !res.data.id) {
-                setProd(res.data)
-                setLoading(false)
-            } else {
+                console.log(res.data)
                 setErr(true)
                 setLoading(false)
+            } else {
+                setProd(res.data)
+                setLoading(false)
+                setErr(false)
             }
             
         })
