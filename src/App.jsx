@@ -3,6 +3,7 @@ import HomePage from "./assets/pages/HomePage"
 import Contacts from "./assets/pages/Contacts"
 import ProductsList from "./assets/pages/ProductsList"
 import DefaultLayout from "./assets/pages/DefaultLayout"
+import ProductPage from "./assets/pages/ProductPage"
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
               <Route path="/" element={<HomePage/>}/>
               <Route path="/us" element={<Contacts/>}/>
               <Route path="/products" element={<ProductsList/>}/>
+              <Route path="/products/:id" element={<ProductPage/>}/>
           </Route>
              
         </Routes>

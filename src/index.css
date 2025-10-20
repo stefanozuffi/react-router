@@ -200,6 +200,22 @@ header {
 }
 
 
+/* Loading */
+.loading-wrap {
+  margin: 20rem auto;
+  
+  
+}
+
+/* Single Product Cards */
+.prod-wrap {
+  margin: 10rem auto;
+  .card {
+    height: 50rem;
+  }
+}
+
+
 
 .footer {
   color: white;

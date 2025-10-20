@@ -1,9 +1,9 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useParams } from "react-router-dom"
 import CardLayout from "./CardLayout"
 import Rating from "../Rating"
 
 
-export default function ProductCard({title, price, image, description, rating, category, show_d}) {
+export default function ProductCard({id, title, price, image, description, rating, category, show_d}) {
 
     let catClass;
     if (category === "men's clothing") {
@@ -20,7 +20,7 @@ export default function ProductCard({title, price, image, description, rating, c
 
     return (
                 <div className={`col col-sm-12 col-md-6 col-lg-4 mb-3`}>
-                    <NavLink to='/' className={`card ${catClass} d-flex justify-content-between companyCard h-100`}>
+                    <NavLink to={`/products/${id}`} className={`card ${catClass} d-flex justify-content-between companyCard h-100`}>
                     <div className="card-header">
                         <h5>{title}</h5>
                         <span>{category}</span>
