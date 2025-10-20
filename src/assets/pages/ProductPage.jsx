@@ -5,17 +5,34 @@ import { Link } from "react-router-dom"
 import ProductCard from "../components/cardss/ProductCard"
 import { Superballs } from 'ldrs/react'
 import 'ldrs/react/Superballs.css'
+import NotFound from "../components/NotFound"
 
 export default function ProductPage() { 
 
     const { id } = useParams() 
     const [prod, setProd] = useState(null) 
+    const [loading, setLoading] = useState(true)
+    const [err, setErr] = useState(false)
     const endpoint = `https://fakestoreapi.com/products/${id}` 
 
     function fetchData(endpoint) {
+        setLoading(true)
+        setErr(false)
+        
+
         axios.get(endpoint)
-        .then(res => setProd(res.data))
-        .catch(err => console.log(err))
+        .then(res => {
+            
+            setProd(res.data)
+            setLoading(false)
+        })
+        .catch(err => {
+            console.log(err)
+            setErr(true)
+            setLoading(false)
+        
+        })
+           
     }
 
     useEffect(() => {
@@ -23,8 +40,8 @@ export default function ProductPage() {
         setTimeout(() => {
             fetchData(endpoint)
         }, 500)
-    }, [id])
 
+    }, [id])
 
    
 
@@ -33,12 +50,12 @@ export default function ProductPage() {
             <div className="item-ctn">
             <div className="btn-ctn up d-flex justify-content-center gap-5">
                 
-                <Link  to={`/products/${parseInt(id) - 1}`}>
+                <Link  to={`/products/${parseInt(id) - 1}`} onClick={() => setLoading(true)}>
                     <button className="btn btn-dark">
                         {"<"}
                     </button>
                 </Link>
-                <Link  to={`/products/${parseInt(id) + 1}`}>
+                <Link  to={`/products/${parseInt(id) + 1}`} onClick={() => setLoading(true)}>
                     <button className="btn btn-dark">
                         {">"}
                     </button>
@@ -46,8 +63,13 @@ export default function ProductPage() {
                 </Link>
             </div>
 
+                {
+                    err && 
+                        <NotFound/>
+                }
+
             
-                {!prod &&
+                {loading &&
                     <div className="loading-wrap d-flex justify-content-center align-items-center">
                         <Superballs
                         size="100"
@@ -57,7 +79,7 @@ export default function ProductPage() {
                     </div>
                         } 
                 
-            {prod && <div className="prod-wrap">
+            {!loading && !err && prod && <div className="prod-wrap">
                     <ProductCard
                     id={prod.id}
                     title={prod.title} 
