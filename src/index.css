@@ -81,36 +81,38 @@ header {
     border-radius: 10px 10px 10px 10px;
     padding-left: 10px;
   }
+
+  h5.cut {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   
   .card-header {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-
-    h5 {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
     
-
     span {
       padding: 0.2rem 0.6rem;
       border-radius: 30px 30px 30px 30px;
     }
   }
 
-  /* .card-body {
-    height: 10%;
-  } */
   .card-body {
     flex-grow: 0;
     padding: 1rem;
   }
 
   img {
-    height: 50%;
-    
+    height: 75%;
+    max-width: 90%;
   }
+}
+
+.cat-title {
+  color: white;
+  border-bottom: 3px solid white;
+  padding-bottom: 2rem;
 }
 
 /* #region Category */
@@ -208,13 +210,47 @@ header {
 }
 
 /* Single Product Cards */
+
+
 .prod-wrap {
-  margin: 10rem auto;
-  .card {
-    height: 50rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    padding: 5rem 0;
+  }
+
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .card-body > span {
+    margin-bottom: 2rem;
+  }
+
+  .description {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, grey 0%,  blue 100%);
   }
 }
 
+.btn-ctn {
+  padding: 2rem 0 5rem 0;
+
+  button {
+    width: 5rem;
+  }
+}
+
+.btn-ctn.up {
+  padding: 0;
+  padding-bottom: 2rem;
+}
 
 
 .footer {
@@ -233,9 +269,10 @@ header {
   }
 }
 
-/* Next Features: 
-
-1) lista prodotti con filter form
-2) pagina singola product card
-
-*/
+/* Media Query */
+@media (max-width: 576px) {
+  .card {
+    width: 85%;
+    margin: 2rem auto;
+  }
+}

@@ -1,9 +1,10 @@
-import { NavLink, useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import CardLayout from "./CardLayout"
 import Rating from "../Rating"
+import { useState } from "react";
 
 
-export default function ProductCard({id, title, price, image, description, rating, category, show_d}) {
+export default function ProductCard({id, title, price, image, description, rating, category, show_d, sm=12, md=6, lg=4, cutTitle=true}) {
 
     let catClass;
     if (category === "men's clothing") {
@@ -19,21 +20,23 @@ export default function ProductCard({id, title, price, image, description, ratin
     }
 
     return (
-                <div className={`col col-sm-12 col-md-6 col-lg-4 mb-3`}>
-                    <NavLink to={`/products/${id}`} className={`card ${catClass} d-flex justify-content-between companyCard h-100`}>
+                <div className={`col col-sm-${sm} col-md-${md} col-lg-${lg} mb-3`}>
+                    <Link to={`/products/${id}`} className={`card ${catClass} d-flex justify-content-between companyCard h-100`}>
                     <div className="card-header">
-                        <h5>{title}</h5>
+                        <h5 className={cutTitle ? 'cut' : ''}>{title}</h5>
                         <span>{category}</span>
                     </div>
+                        <div className="img-ctn d-flex justify-content-center align-items-center">
+                            {image && <img src={image} alt="card-image"/>}
+                        </div>
                         
-                        {image && <img src={image} alt="card-image"/>}
                         <div className="card-body">
                             {price ? <span className="d-block"> ${price}</span> : null}
-                            {description  && show_d ? <span className="d-block"> {description}</span> : null}
+                            {description  && show_d ? <span className="description d-block"> {description}</span> : null}
                             <Rating rating={rating}/>
                             
                         </div>
-                    </NavLink>
+                    </Link>
                 </div>
         
     )
