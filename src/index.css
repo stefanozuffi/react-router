@@ -74,8 +74,8 @@ header {
 }
 
 .card {
-  border: none;
   color: white;
+  border: none;
 
   span {
     border-radius: 10px 10px 10px 10px;
@@ -91,6 +91,7 @@ header {
   .card-header {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    
     
     span {
       padding: 0.2rem 0.6rem;
@@ -108,6 +109,20 @@ header {
     max-width: 90%;
   }
 }
+
+.man .card-header {
+    border-bottom: 3px solid rgb(3, 3, 125); 
+}
+.jewl .card-header {
+  border-bottom: 3px solid rgb(240, 205, 49); 
+}
+.woman .card-header {
+  border-bottom: 3px solid rgb(240, 13, 130); 
+}
+.elec .card-header {
+  border-bottom: 3px solid black; 
+}
+
 
 .cat-title {
   color: white;
@@ -141,13 +156,17 @@ header {
 
     
   }
-
   .woman .card-header {
     background: linear-gradient(180deg, rgba(228, 212, 39, 0.634) 0%,rgba(213, 203, 87, 0.637) 100%);
     color: white;
   }
-   
+   .woman .card-body .description {
+      background: linear-gradient(135deg, grey 0%,  rgb(255, 0, 221) 100%);
+   }
+
 }
+
+
 
 .jewl {
   background: linear-gradient(180deg, rgba(255, 251, 137, 0.561) -20%, transparent 100%);
@@ -221,6 +240,17 @@ header {
   img {
     padding: 5rem 0;
   }
+
+
+  .woman .card-body .description {
+    background: linear-gradient(135deg, grey 0%,  rgb(255, 0, 221) 100%);
+ }
+
+ .jewl .card-body .description {
+  background: linear-gradient(135deg, grey 0%,  rgb(240, 153, 13) 100%);
+}
+
+ 
 
 
   .card-body {
