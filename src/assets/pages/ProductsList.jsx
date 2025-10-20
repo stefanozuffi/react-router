@@ -17,7 +17,7 @@ export default function ProductsList() {
     useEffect(() => {
         setTimeout(() => {
             fetchData('https://fakestoreapi.com/products')
-        }, 1500)
+        }, 500)
     }, [])
 
 

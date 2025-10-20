@@ -22,16 +22,22 @@ export default function ProductPage() {
 
         axios.get(endpoint)
         .then(res => {
+            if (!res.data || !res.data.id) {
+                setProd(res.data)
+                setLoading(false)
+            } else {
+                setErr(true)
+                setLoading(false)
+            }
             
-            setProd(res.data)
-            setLoading(false)
         })
-        .catch(err => {
-            console.log(err)
-            setErr(true)
-            setLoading(false)
+
+        // .catch(err => {
+        //     console.log(err)
+        //     setErr(true)
+        //     setLoading(false)
         
-        })
+        // }) *** COMMENT: catch does not work: API answers with empty json, status 200. It has to be handles in .then ***
            
     }
 
