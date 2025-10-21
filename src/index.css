@@ -54,7 +54,7 @@ header {
 
 .home-ctn-in {
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   color: white;
 }
 
@@ -69,7 +69,7 @@ header {
   margin-top: 1rem;
   background-color: rgb(106,99,246);
   background-color: #1c7d1c;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .jumbo.home {
@@ -79,7 +79,7 @@ header {
   width: 80%;
 }
 
-.jumbo.home p {
+.jumbo.home.double-col p {
   font-size: 0.9rem; 
   margin: 2rem auto;
 }
@@ -101,9 +101,13 @@ header {
 
 .pic-ctn-lg {
   width: 90%;
+  gap: 5rem;
 }
-.pic-ctn-lg .big-pic {
+.pic-ctn-lg .big-pic-ctn {
   width: 40%;
+}
+.big-pic-ctn img {
+  width: 28rem;
 }
 .pic-ctn-lg .small-pic {
   width: 100%;
@@ -112,6 +116,11 @@ header {
 .small-pics-ctn {
   width: 28%;
 }
+
+.one-col p {
+  font-size: 1rem;
+}
+
 
 
 .card {
