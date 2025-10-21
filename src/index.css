@@ -64,12 +64,34 @@ header {
   }
 }
 
+.home-ctn-in {
+  margin: 0 auto;
+  width: 100%;
+}
+
 .jumbo {
   background: linear-gradient(135deg, rgb(139, 225, 139) 0%,rgb(216, 248, 216) 100%);
   text-align: center;
 
   p {
-     margin: 5rem auto;
+     margin: 2rem auto;
+     width: 100%;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+}
+
+.jumbo.home {
+  width: 50%;
+}
+.pic-ctn {
+  width: 35%;
+  padding-top: 10%;
+
+  img {
+    width: 100%;
   }
 }
 
