@@ -35,12 +35,12 @@ export default function ProductPage() {
             
         })
 
-        // .catch(err => {
-        //     console.log(err)
-        //     setErr(true)
-        //     setLoading(false)
-        
-        // }) *** COMMENT: catch does not work: API answers with empty json, status 200. It has to be handles in .then ***
+        .catch(err => {
+            console.log(err)
+            setErr(true)
+            setLoading(false)
+        })
+        //  *** COMMENT: catch does not work: API answers with empty json, status 200. It has to be handles in .then ***
            
     }
 

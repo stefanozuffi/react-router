@@ -88,20 +88,15 @@ export default function HomePage() {
                         </div>
                     </div>
              */}
-             <div className="home-ctn-in d-flex justify-content-between flex-sm-column flex-md-row align-items-sm-center mb-4">
+             <div className="home-ctn-in d-flex justify-content-around flex-sm-column flex-md-row align-items-sm-center mb-4">
                         <div className="jumbo home double-col d-flex flex-column align-items-center">
                             <div className="container-fluid py-2">
-                                <h2 className="display-5 fw-bold"> Dive Into Inexistent Products! </h2>
-                                <p className="col-md-11">
-                                Welcome to The Fake E-Commerce, where imagination meets reality! 
-                                Explore our curated collection of products that don't actually exist, 
-                                but look absolutely stunning. From cutting-edge electronics to timeless 
-                                fashion pieces, discover items that are perfect for your demo projects, 
-                                portfolios, or just for browsing pleasure. No real transactions, 
-                                just pure shopping experience!
+                            <h2 className="display-5 fw-bold"> Don't Worry About Practilaties </h2>
+                                <p>
+                                We will deal with both logistics and burocracy for you!
                                 </p>
-                                <NavLink to={'/products'} className="j-btn" type="button">
-                                    Start Shopping
+                                <NavLink to={'/us'} className="j-btn" type="button">
+                                    Contact Us
                                 </NavLink>
                             </div>
                         </div>

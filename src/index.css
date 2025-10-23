@@ -87,7 +87,7 @@ header {
   font-size: 1.5rem; 
   margin: 2rem auto;
   color: rgb(106,99,246);
-  color: #1c7d1c;
+  color: #a0d6a0;
 }
 
 .pic-ctn {
@@ -106,8 +106,11 @@ header {
 .pic-ctn-lg .big-pic-ctn {
   width: 40%;
 }
-.big-pic-ctn img {
+.big-pic-ctn {
   width: 28rem;
+}
+.big-pic-ctn img{
+  width: 100%;
 }
 .pic-ctn-lg .small-pic {
   width: 100%;
